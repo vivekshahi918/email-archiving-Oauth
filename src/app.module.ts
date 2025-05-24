@@ -32,8 +32,8 @@ import { GoogleRefreshTaskService } from './task/google-refresh-task.service';
           username: dbConfig.username,
           password: dbConfig.password,
           database: dbConfig.name,
-          entities: [Email, Attachment], // ✅ FIXED: Add Attachment entity here
-          synchronize: true, // ⚠️ Disable in production
+          entities: [Email, Attachment], 
+          synchronize: true, 
           extra: {
             ssl: {
               rejectUnauthorized: false,
@@ -44,7 +44,7 @@ import { GoogleRefreshTaskService } from './task/google-refresh-task.service';
       inject: [ConfigService],
     }),
 
-    TypeOrmModule.forFeature([Email, Attachment]), // ✅ Enables Repositories
+    TypeOrmModule.forFeature([Email, Attachment]), 
     GoogleAuthModule,
   ],
   providers: [GoogleAuthService, GmailService, GoogleRefreshTaskService,],
@@ -57,6 +57,6 @@ export class AppModule implements OnModuleInit {
       this.gmailService.fetchAndStoreEmails()
         .then(() => console.log('✅ Fetched new emails'))
         .catch(err => console.error('❌ Email fetch error:', err));
-    }, 5 * 60 * 1000); // Every 5 minutes
+    }, 3 * 60 * 1000); // Every 3 minutes
   }
 }

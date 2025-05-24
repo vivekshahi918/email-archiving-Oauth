@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
 import { google, gmail_v1 } from 'googleapis';
 import { Buffer } from 'buffer';
-import { Readable } from 'stream'; // ✅ NEW
+import { Readable } from 'stream'; 
 import { Email } from '../email/email.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -186,7 +186,7 @@ export class GmailService {
     }
   }
 
-  @Cron('*/5 * * * *') // Every 5 minutes
+  @Cron('*/3 * * * *') // Every 5 minutes
   async handleCron() {
     this.logger.log('⏰ Running scheduled email fetch...');
     try {
