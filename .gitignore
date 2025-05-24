@@ -45,6 +45,7 @@ lerna-debug.log*
 # temp directory
 .temp
 .tmp
+.env
 tokens.json
 src/config/client_service.json
 src/config/token.json
