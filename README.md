@@ -14,7 +14,7 @@
 
 ## 📽️ Loom Demo
 
-[Click here to watch the Loom video walkthrough]([https://www.loom.com/share/your-video-link](https://www.loom.com/share/2d2c153ece7c45fba3b399785d749071?sid=42f052cd-cfd6-4cb7-b3ce-4b2d53fe8989))
+[Click here to watch the Loom video walkthrough](https://www.loom.com/share/your-video-link](https://www.loom.com/share/2d2c153ece7c45fba3b399785d749071?sid=42f052cd-cfd6-4cb7-b3ce-4b2d53fe8989)
 
 ---
 
