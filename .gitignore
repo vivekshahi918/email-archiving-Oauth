@@ -45,7 +45,9 @@ lerna-debug.log*
 # temp directory
 .temp
 .tmp
-
+tokens.json
+src/config/client_service.json
+src/config/token.json
 # Runtime data
 pids
 *.pid
