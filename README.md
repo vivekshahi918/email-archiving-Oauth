@@ -1,98 +1,132 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="https://nestjs.com/" target="blank">
+    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
+  </a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h2 align="center">📧 Email Archiver with Gmail OAuth + PostgreSQL</h2>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  A full-stack NestJS project that uses Google OAuth2 to archive Gmail messages and attachments into PostgreSQL and optionally Google Drive.
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📽️ Loom Demo
 
-## Project setup
+[Click here to watch the Loom video walkthrough]([https://www.loom.com/share/your-video-link](https://www.loom.com/share/2d2c153ece7c45fba3b399785d749071?sid=42f052cd-cfd6-4cb7-b3ce-4b2d53fe8989))
 
-```bash
-$ npm install
-```
+---
 
-## Compile and run the project
+## 📌 Features
 
-```bash
-# development
-$ npm run start
+- 🔐 Google OAuth 2.0 integration
+- 📩 Fetch emails via Gmail API
+- 💾 Store email metadata into PostgreSQL
+- 📎 Save attachments to Google Drive
+- 📤 Schedule email fetching via GitHub Actions
+- 🔍 Search and view archived emails (optional frontend)
+- 🌐 Deployment-ready with Railway or other PostgreSQL hosting
 
-# watch mode
-$ npm run start:dev
+---
 
-# production mode
-$ npm run start:prod
-```
+## 🚀 Tech Stack
 
-## Run tests
+- **Backend:** NestJS (TypeScript)
+- **OAuth & APIs:** Google Gmail API, Google Drive API
+- **Database:** PostgreSQL
+- **ORM:** TypeORM
+- **Deployment:** Railway + GitHub Actions
+- **Auth Strategy:** OAuth2 with `client_secret.json`
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+## 🗂️ Folder Structure
 
-# test coverage
-$ npm run test:cov
-```
+email-archiver/
+├── src/
+│   ├── app/
+│   ├── auth/
+│   ├── email/
+│   ├── google/
+│   ├── entities/
+│   └── app.module.ts
+├── .env
+├── client_secret.json
+├── package.json
+└── README.md
 
-## Deployment
+⚙️ Setup Instructions
+1. Clone and Install Dependencies
+bash
+Copy
+Edit
+git clone https://github.com/vivekshahi918/email-archiver.git
+cd email-archiver
+npm install
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+3. Configure Environment Variables
+Create a .env file at the root:
+env
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+DATABASE_URL=postgresql://postgres:<your-password>@<host>:<port>/<database>
+GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json
+Example Railway connection:
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+env
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway
 
-## Resources
+3. Add Google OAuth Credentials
+Go to Google Cloud Console
 
-Check out a few resources that may come in handy when working with NestJS:
+Enable Gmail API and Drive API
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Set up OAuth consent screen
 
-## Support
+Create OAuth Client ID for Web
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Add redirect URI: http://localhost:3000/auth/google/callback
 
-## Stay in touch
+Download client_secret_*.json
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Rename it to client_secret.json and place it at src/config/client_secret.json
 
-## License
+4. Start the Development Server
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+npm run start:dev
+Visit: http://localhost:3000
+Google login will initiate the OAuth flow.
+
+🧪 Test Email Fetching
+Log in with your Google Account
+
+System fetches last 50 emails from inbox
+
+Email data stored in PostgreSQL
+
+Attachments uploaded to your Google Drive
+
+
+📦 Build for Production
+
+npm run build
+npm run start:prod
+
+🛠️ Future Improvements
+Add search and filters to frontend
+
+Store emails in batches
+
+Add pagination to email list view
+
+Secure OAuth tokens via encryption
+
+👨‍💻 Author
+Vivek
+Email: shahivivek503@gmail.com
+GitHub: github.com/vivekshahi918
+
+📝 License
+This project is MIT licensed.
+
