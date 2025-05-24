@@ -24,8 +24,7 @@
 - 📩 Fetch emails via Gmail API
 - 💾 Store email metadata into PostgreSQL
 - 📎 Save attachments to Google Drive
-- 📤 Schedule email fetching via GitHub Actions
-- 🔍 Search and view archived emails (optional frontend)
+- 📤 Schedule email fetching via node-cron
 - 🌐 Deployment-ready with Railway or other PostgreSQL hosting
 
 ---
@@ -36,7 +35,7 @@
 - **OAuth & APIs:** Google Gmail API, Google Drive API
 - **Database:** PostgreSQL
 - **ORM:** TypeORM
-- **Deployment:** Railway + GitHub Actions
+- **Deployment:** Railway
 - **Auth Strategy:** OAuth2 with `client_secret.json`
 
 ---
@@ -58,9 +57,7 @@ email-archiver/
 
 ⚙️ Setup Instructions
 1. Clone and Install Dependencies
-bash
-Copy
-Edit
+
 git clone https://github.com/vivekshahi918/email-archiver.git
 cd email-archiver
 npm install
