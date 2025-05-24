@@ -58,51 +58,51 @@ email-archiver/
 ⚙️ Setup Instructions
 1. Clone and Install Dependencies
 
-git clone https://github.com/vivekshahi918/email-archiver.git
-cd email-archiver
-npm install
+  git clone https://github.com/vivekshahi918/email-archiver.git
+  cd email-archiver
+  npm install
 
-3. Configure Environment Variables
-Create a .env file at the root:
-env
-
-DATABASE_URL=postgresql://postgres:<your-password>@<host>:<port>/<database>
-GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json
-Example Railway connection:
-
-env
-
-DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway
+2. Configure Environment Variables
+  Create a .env file at the root:
+  env
+  
+  DATABASE_URL=postgresql://postgres:<your-password>@<host>:<port>/<database>
+  GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json
+  Example Railway connection:
+  
+  env
+  
+  DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway
 
 3. Add Google OAuth Credentials
-Go to Google Cloud Console
-
-Enable Gmail API and Drive API
-
-Set up OAuth consent screen
-
-Create OAuth Client ID for Web
-
-Add redirect URI: http://localhost:3000/auth/google/callback
-
-Download client_secret_*.json
-
-Rename it to client_secret.json and place it at src/config/client_secret.json
+  Go to Google Cloud Console
+  
+  Enable Gmail API and Drive API
+  
+  Set up OAuth consent screen
+  
+  Create OAuth Client ID for Web
+  
+  Add redirect URI: http://localhost:3000/auth/google/callback
+  
+  Download client_secret_*.json
+  
+  Rename it to client_secret.json and place it at src/config/client_secret.json
 
 4. Start the Development Server
 
-npm run start:dev
-Visit: http://localhost:3000
-Google login will initiate the OAuth flow.
+  npm run start:dev
+  Visit: http://localhost:3000
+  Google login will initiate the OAuth flow.
 
 🧪 Test Email Fetching
-Log in with your Google Account
-
-System fetches last 50 emails from inbox
-
-Email data stored in PostgreSQL
-
-Attachments uploaded to your Google Drive
+  Log in with your Google Account
+  
+  System fetches last 50 emails from inbox
+  
+  Email data stored in PostgreSQL
+  
+  Attachments uploaded to your Google Drive
 
 
 📦 Build for Production
