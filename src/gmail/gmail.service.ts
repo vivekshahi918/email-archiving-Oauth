@@ -186,7 +186,7 @@ export class GmailService {
     }
   }
 
-  @Cron('*/3 * * * *') // Every 5 minutes
+  @Cron('*/3 * * * *') // Every 3 minutes
   async handleCron() {
     this.logger.log('⏰ Running scheduled email fetch...');
     try {
