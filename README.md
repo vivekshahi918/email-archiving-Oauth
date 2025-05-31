@@ -40,20 +40,6 @@
 
 ---
 
-## 🗂️ Folder Structure
-
-email-archiver/
-├── src/
-│   ├── app/
-│   ├── auth/
-│   ├── email/
-│   ├── google/
-│   ├── entities/
-│   └── app.module.ts
-├── .env
-├── client_secret.json
-├── package.json
-└── README.md
 
 ## ⚙️ Setup Instructions
 
