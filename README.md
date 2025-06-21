@@ -65,15 +65,15 @@
 
 1. Clone and Install Dependencies
 
-    `git clone https://github.com/vivekshahi918/email-archiving-Oauth.git  
-    cd email-archiver  
-    npm install`
+    `git clone https://github.com/vivekshahi918/email-archiving-Oauth.git` 
+    `cd email-archiver`  
+    `npm install`
 
 2. Configure Environment Variables  
    Create a .env file at the root:
 
-    `DATABASE_URL=postgresql://postgres:@/  
-    GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json`  
+    `DATABASE_URL=postgresql://postgres:@/`  
+    `GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json`  
 
     Example Railway connection:  
     .env
@@ -106,8 +106,8 @@
 
 ## 📦 Build for Production
 
-  `npm run build  
-  npm run start:prod`
+  `npm run build`  
+  `npm run start:prod`
 
 ## 🛠️ Future Improvements
 
