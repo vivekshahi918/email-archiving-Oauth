@@ -12,20 +12,6 @@
 
 ---
 
-## 📽️ Demo – Project Walkthrough 🎯
-
-Click the image below to watch the demo video of the project 👇
-
-[![Watch the Demo](https://i.imgur.com/6RMhx.gif)](https://drive.google.com/file/d/1zG5rOLJkcttHIpLLkqUHBIIlgOSG1TTc/view?usp=sharing)
-
-🎥 What’s covered:
-- 🔐 Google OAuth2 login & callback flow
-- 📩 Gmail API integration
-- 📎 Attachments saved to Google Drive
-- 🛢️ Email metadata stored in PostgreSQL
-- ⏱️ Scheduled sync using `node-cron`
-
----
 
 ## 🖼️ Screenshots
 
