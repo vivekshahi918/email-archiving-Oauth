@@ -69,7 +69,7 @@
     `cd email-archiver`  
     `npm install`
 
-2. Configure Environment Variables  
+3. Configure Environment Variables  
    Create a .env file at the root:
 
     `DATABASE_URL=postgresql://postgres:@/`  
@@ -80,7 +80,7 @@
     
     `DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway`
 
-3. Add Google OAuth Credentials  
+4. Add Google OAuth Credentials  
    Go to Google Cloud Console
     
     - Enable Gmail API and Drive API  
@@ -91,7 +91,7 @@
     - Rename it to client_secret.json and place it at:  
       `src/config/client_secret.json`
 
-4. Start the Development Server
+5. Start the Development Server
 
     `npm run start:dev`  
     Visit: `http://localhost:3000`  
