@@ -65,37 +65,37 @@
 
 1. Clone and Install Dependencies
 
-git clone https://github.com/vivekshahi918/email-archiving-Oauth.git  
-cd email-archiver  
-npm install
+    `git clone https://github.com/vivekshahi918/email-archiving-Oauth.git  
+    cd email-archiver  
+    npm install`
 
 2. Configure Environment Variables  
-Create a .env file at the root:
+   Create a .env file at the root:
 
-DATABASE_URL=postgresql://postgres:@/  
-GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json  
+    `DATABASE_URL=postgresql://postgres:@/  
+    GOOGLE_CLIENT_SECRET_PATH=src/config/client_secret.json`  
 
-Example Railway connection:  
-.env
-
-DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway
+    Example Railway connection:  
+    .env
+    
+    `DATABASE_URL=postgresql://postgres:yourpassword@yamanote.proxy.rlwy.net:18496/railway`
 
 3. Add Google OAuth Credentials  
-Go to Google Cloud Console
-
-- Enable Gmail API and Drive API  
-- Set up OAuth consent screen  
-- Create OAuth Client ID for Web  
-- Add redirect URI: http://localhost:3000/auth/google/callback  
-- Download client_secret_*.json  
-- Rename it to client_secret.json and place it at:  
-  src/config/client_secret.json
+   Go to Google Cloud Console
+    
+    - Enable Gmail API and Drive API  
+    - Set up OAuth consent screen  
+    - Create OAuth Client ID for Web  
+    - Add redirect URI: `http://localhost:3000/auth/google/callback ` 
+    - Download client_secret_*.json  
+    - Rename it to client_secret.json and place it at:  
+      `src/config/client_secret.json`
 
 4. Start the Development Server
 
-npm run start:dev  
-Visit: http://localhost:3000  
-Google login will initiate the OAuth flow.
+    `npm run start:dev`  
+    Visit: `http://localhost:3000`  
+    Google login will initiate the OAuth flow.
 
 ## 🧪 Test Email Fetching
 
@@ -106,8 +106,8 @@ Google login will initiate the OAuth flow.
 
 ## 📦 Build for Production
 
-npm run build  
-npm run start:prod
+  `npm run build  
+  npm run start:prod`
 
 ## 🛠️ Future Improvements
 
