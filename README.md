@@ -64,10 +64,15 @@
 ## ⚙️ Setup Instructions
 
 1. Clone and Install Dependencies
-
-    `git clone https://github.com/vivekshahi918/email-archiving-Oauth.git` 
-    `cd email-archiver`  
-    `npm install`
+    ```bash
+    git clone https://github.com/vivekshahi918/email-archiving-Oauth.git
+    ```
+    ```bash
+    cd email-archiver
+    ```
+    ```bash  
+    npm install
+    ```
 
 3. Configure Environment Variables  
    Create a .env file at the root:
@@ -92,8 +97,9 @@
       `src/config/client_secret.json`
 
 5. Start the Development Server
-
-    `npm run start:dev`  
+    ```bash
+    npm run start:dev
+    ```  
     Visit: `http://localhost:3000`  
     Google login will initiate the OAuth flow.
 
@@ -106,8 +112,10 @@
 
 ## 📦 Build for Production
 
-  `npm run build`  
-  `npm run start:prod`
+  ```bash
+  npm run build  
+  npm run start:prod
+  ```
 
 ## 🛠️ Future Improvements
 
