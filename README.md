@@ -14,7 +14,10 @@
 
 ## 📽️ Loom Demo – Project Walkthrough 🎯
 
+Click the image below to watch the demo video of the project 👇
+
 [![Watch the Demo](https://cdn.loom.com/sessions/thumbnails/2d2c153ece7c45fba3b399785d749071-with-play.gif)](https://www.loom.com/share/2d2c153ece7c45fba3b399785d749071?sid=42f052cd-cfd6-4cb7-b3ce-4b2d53fe8989)
+
 
 🎥 What’s covered:
 - 🔐 Google OAuth2 login & callback flow
