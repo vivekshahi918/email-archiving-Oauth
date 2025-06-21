@@ -18,6 +18,31 @@
 
 ---
 
+## 🖼️ Screenshots
+
+### 🔐 After Authentication
+![After Authentication](screenshots/after-authentication.png)
+
+### 🗃️ Entity in My Database
+![Entity in My Database](screenshots/entity-in-db.png)
+
+### 📥 Fetching Emails
+![Fetching Emails](screenshots/fetching-emails.png)
+
+### 🔗 Generated URL
+![Generated URL](screenshots/generated-url.png)
+
+### ☁️ Google Cloud Setup
+![Google Cloud](screenshots/google-cloud.png)
+
+### 🚀 Starting the App
+![Starting App](screenshots/starting-app.png)
+
+### 📊 Table in Database
+![Table in Database](screenshots/table-in-database.png)
+
+---
+
 ## 📌 Features
 
 - 🔐 Google OAuth 2.0 integration
@@ -45,7 +70,7 @@
 
 1. Clone and Install Dependencies
 
-git clone https://github.com/vivekshahi918/email-archiver.git  
+git clone https://github.com/vivekshahi918/email-archiving-Oauth.git  
 cd email-archiver  
 npm install
 
@@ -98,11 +123,7 @@ npm run start:prod
 
 ## 👨‍💻 Author
 
-Vivek  
+Vivek Shahi
 Email: shahivivek503@gmail.com  
 GitHub: https://github.com/vivekshahi918
-
-## 📝 License
-
-This project is MIT licensed.
 
